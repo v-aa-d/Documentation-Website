@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a14;
+  color: #bbb;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────────────────────── */
+
+#sidebar {
+  width: 200px;
+  min-width: 180px;
+  flex-shrink: 0;
+  background: #0e0e1e;
+  border-right: 1px solid #1c1c30;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #1c1c30;
+}
+
+/* ── Main canvas area ───────────────────────────────────────────────────────── */
+
+#main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px;
+}
+
+/* ── Control groups ─────────────────────────────────────────────────────────── */
+
+.grp {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grp label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.grp input[type="text"] {
+  background: #060610;
+  border: 1px solid #252540;
+  color: #ccc;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  width: 100%;
+}
+
+.grp select {
+  background: #060610;
+  border: 1px solid #252540;
+  color: #ccc;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 10px;
+  width: 100%;
+}
+
+.grp input[type="range"] {
+  width: 100%;
+  accent-color: #4455dd;
+  cursor: pointer;
+}
+
+.grp .val {
+  font-size: 11px;
+  color: #666;
+  min-width: 24px;
+  display: inline-block;
+}
+
+/* ── Button grid ────────────────────────────────────────────────────────────── */
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.btn {
+  background: #101028;
+  border: 1px solid #2a3060;
+  color: #6677cc;
+  padding: 5px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #181838;
+  color: #8899ee;
+}
+
+.btn.on {
+  background: #1a1a40;
+  border-color: #4455cc;
+  color: #99aaff;
+}
+
+/* ── Separator ──────────────────────────────────────────────────────────────── */
+
+.separator {
+  border-top: 1px solid #1c1c30;
+}
+
+/* ── Status line ────────────────────────────────────────────────────────────── */
+
+#status {
+  font-size: 9px;
+  color: #333;
+  letter-spacing: 1px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* ── Canvas ─────────────────────────────────────────────────────────────────── */
+
+canvas {
+  border: 1px solid #111122;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ── Light theme ────────────────────────────────────────────────────────────── */
+
+body.light {
+  background: #f2f2f4;
+  color: #333;
+}
+
+body.light #sidebar {
+  background: #e8e8ee;
+  border-right-color: #ccc;
+}
+
+body.light h1 { color: #aaa; }
+body.light .separator { border-top-color: #ccc; }
+body.light #status { color: #aaa; }
+
+body.light .grp label { color: #888; }
+body.light .grp .val { color: #999; }
+
+body.light .grp input[type="text"],
+body.light .grp select {
+  background: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+
+body.light .btn {
+  background: #e0e0e8;
+  border-color: #b0b0c0;
+  color: #446;
+}
+
+body.light .btn:hover {
+  background: #d4d4e0;
+  color: #224;
+}
+
+body.light .btn.on {
+  background: #c8c8e0;
+  border-color: #8888bb;
+  color: #224;
+}
+
+body.light canvas {
+  border-color: #ccc;
+}

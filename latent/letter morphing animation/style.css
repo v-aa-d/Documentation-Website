@@ -1,0 +1,160 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Theme variables ──────────────────────────────────────────────────────── */
+:root {
+  --bg:      #f4f4f0;
+  --surface: #ececec;
+  --border:  #d0d0cc;
+  --text:    #888;
+  --text-hi: #333;
+  --accent:  #3344bb;
+  --btn-bg:  #e6e6e2;
+  --btn-bd:  #b8b8b4;
+  --btn-fg:  #3344bb;
+  --val:     #999;
+  --input-bg:#ffffff;
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 14px 8px;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ── Panel ────────────────────────────────────────────────────────────────── */
+#panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 12px;
+  max-width: 880px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: flex-end;
+}
+
+.grp {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.grp label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.grp input[type="text"] {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text-hi);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  width: 180px;
+}
+
+.grp select {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text-hi);
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.grp input[type="range"] {
+  width: 100px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.grp .val {
+  font-size: 10px;
+  color: var(--val);
+  min-width: 24px;
+  display: inline-block;
+}
+
+/* ── Button row ───────────────────────────────────────────────────────────── */
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-bd);
+  color: var(--btn-fg);
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover { filter: brightness(1.2); }
+
+.btn.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ── t slider ─────────────────────────────────────────────────────────────── */
+#t-row {
+  max-width: 880px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#t-row label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#t-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* ── Status ───────────────────────────────────────────────────────────────── */
+#status {
+  font-size: 9px;
+  color: var(--val);
+  letter-spacing: 2px;
+  height: 12px;
+}
+
+/* ── Canvas ───────────────────────────────────────────────────────────────── */
+canvas {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  display: block;
+}

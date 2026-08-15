@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>entropy type</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="controls">
+    <div id="controls-top">
+      <textarea id="txt-input" rows="3" maxlength="60" autocomplete="off" spellcheck="false" placeholder="type here">type here</textarea>
+      <label id="font-label">
+        upload font
+        <input type="file" id="font-upload" accept=".otf,.ttf" tabindex="-1">
+      </label>
+    </div>
+    <div id="controls-sliders">
+      <div class="slider-row">
+        <span class="slider-label">entropy</span>
+        <input type="range" id="entropy-slider" min="0" max="100" value="50">
+      </div>
+      <div class="slider-row">
+        <span class="slider-label">size</span>
+        <input type="range" id="size-slider" min="1" max="12" value="3" step="0.5">
+      </div>
+      <button id="stroke-toggle" class="active">particles</button>
+      <div id="shape-selector">
+        <button class="shape-btn active" data-shape="circle">○</button>
+        <button class="shape-btn" data-shape="square">□</button>
+        <button class="shape-btn" data-shape="ellipse">⬭</button>
+      </div>
+      <button id="save-btn">save png</button>
+    </div>
+  </div>
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

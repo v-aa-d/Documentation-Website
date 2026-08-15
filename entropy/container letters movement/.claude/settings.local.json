@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to make new window with properties {URL:\"http://localhost:8934/index.html\"}')",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to set bounds of front window to {0,0,1280,900}')",
+      "Bash(screencapture -x /private/tmp/entropy_screenshot_1.png)",
+      "Bash(node --check sketch.js)"
+    ]
+  }
+}

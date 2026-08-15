@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Morph Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+<body>
+
+<div id="sidebar">
+  <div class="grp">
+    <div class="hz-row">
+      <span id="lbl-pts"></span>
+      <span id="val-pts"></span>
+    </div>
+    <input type="range" id="nPts" min="10" max="300" value="200" step="10">
+  </div>
+  <div class="grp">
+    <div class="hz-row">
+      <span id="lbl-dot"></span>
+      <span id="val-dot"></span>
+    </div>
+    <input type="range" id="dotSize" min="1" max="12" value="3">
+  </div>
+  <div class="grp">
+    <span id="lbl-interp"></span>
+    <div id="interp-list"></div>
+  </div>
+  <div class="grp">
+    <button id="linesBtn"></button>
+  </div>
+  <div class="grp">
+    <button id="exportSvgBtn"></button>
+    <button id="exportPngBtn"></button>
+  </div>
+</div>
+
+<div id="main"><div id="sketch"></div></div>
+
+<div id="grid-panel"></div>
+
+<script src="sketch.js"></script>
+</body>
+</html>

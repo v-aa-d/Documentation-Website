@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Morphing · Text to Points</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+<body>
+
+<div id="sidebar">
+  <h1>Letter Morph</h1>
+
+  <div class="grp">
+    <label>Letters</label>
+    <input type="text" id="lettersInput" value="H, A, W">
+  </div>
+
+  <div class="grp">
+    <label>Points &nbsp;<span class="val" id="nPtsVal">200</span></label>
+    <input type="range" id="nPts" min="20" max="700" value="200" step="10">
+  </div>
+
+  <div class="grp">
+    <label>Interpolation</label>
+    <select id="interp">
+      <option value="linear">Linear</option>
+      <option value="smoothstep">Smoothstep</option>
+      <option value="cosine">Cosine</option>
+      <option value="catmullrom">Catmull-Rom Spline</option>
+      <option value="cubic">Cubic Ease In/Out</option>
+      <option value="elastic">Elastic</option>
+      <option value="bounce">Bounce</option>
+      <option value="back">Back (overshoot)</option>
+      <option value="expo">Exponential</option>
+      <option value="poly5">Polynomial 5th</option>
+    </select>
+  </div>
+
+  <div class="grp">
+    <label>Speed &nbsp;<span class="val" id="speedVal">30</span></label>
+    <input type="range" id="speed" min="1" max="300" value="30">
+  </div>
+
+  <div class="grp">
+    <label>Dot size &nbsp;<span class="val" id="dotVal">3</span></label>
+    <input type="range" id="dotSize" min="1" max="12" value="3">
+  </div>
+
+  <div class="grp">
+    <label>Trail &nbsp;<span class="val" id="trailVal">12</span></label>
+    <input type="range" id="trail" min="2" max="50" value="12">
+  </div>
+
+  <div class="grp">
+    <label>t &nbsp;<span id="tDisp">0.000</span></label>
+  </div>
+  <input type="range" id="tManual" min="0" max="2" step="0.001" value="0" hidden>
+
+  <div class="btn-grid">
+    <button class="btn" id="applyBtn">Apply</button>
+    <button class="btn" id="playBtn">Pause</button>
+    <button class="btn" id="linesBtn">Lines: Off</button>
+    <button class="btn" id="ghostBtn">Ghost: Off</button>
+    <button class="btn" id="colorBtn">Color: Hue</button>
+    <button class="btn" id="filledBtn">Filled: Off</button>
+    <button class="btn" id="bgBtn">White BG</button>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="grp">
+    <label>Frames &nbsp;<span class="val" id="frameCountVal">60</span></label>
+    <input type="range" id="frameCount" min="10" max="300" value="60" step="10">
+  </div>
+
+  <div class="btn-grid">
+    <button class="btn" id="saveFramesBtn">JSON</button>
+    <button class="btn" id="savePngBtn">PNG</button>
+    <button class="btn" id="saveSvgBtn">SVG</button>
+  </div>
+
+  <div id="status">Ready.</div>
+</div>
+
+<div id="main">
+  <div id="sketch"></div>
+</div>
+
+<script src="sketch.js"></script>
+</body>
+</html>
