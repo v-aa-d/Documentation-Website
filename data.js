@@ -432,6 +432,18 @@ images: [
     description:
       "The web enviroment provides a base to explore the translation into a physical space. The SVG files can be reinterpreted into a G-Code that is sent to a 3D printer, following the same coordinates but this time with a material.",
   },
+
+  {
+    term: "ceramic translation",
+    keyword: "sequence",
+    type: "analogue",
+    date: "10.08.26",
+    section: "latent",
+    mode: "gallery",
+    images: ["ceramic translation/1.JPG", "ceramic translation/2.JPG", "ceramic translation/3.JPG", "ceramic translation/4.JPG", "ceramic translation/5.JPG"],
+    description:
+      "On the 3D printing workflow, i also explores more manual materials, such as clay,where the layers and the gravity influenced the initial coordinates.",
+  },
   // entropy
   {
     term: "letters as containers",
